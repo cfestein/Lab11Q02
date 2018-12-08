@@ -6,9 +6,23 @@
  * Purpose: 
  */
 
-
+#include "..\header\Student.h"
+#include <fstream>
+#include <iostream>
+using namespace std;
 
 int main() {
+
+	ifstream inputFile;
+	inputFile.open("studentData.txt");
+
+	string text;
+	while (!inputFile.eof()) {
+		inputFile >> text;
+		cout << text;
+	}
+
+	inputFile.close();
 
 	system("pause");
 	return 0;
